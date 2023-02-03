@@ -1,6 +1,7 @@
 fn main(){
     teste_while(1);
-    teste_loop(0);
+    teste_loop(1);
+    teste_matchrange(1);
 }
 
 //While:
@@ -25,6 +26,15 @@ fn teste_loop(mut i:i8){
         }
     }
 }
-fn teste_matchrange(mut i:i8){
-    let 
+
+//Match:
+fn teste_matchrange(a:i8){
+    println!("{}, Match: ", a);
+    let linguagem = "Assembly";
+    let proposito = match linguagem{
+        "JavaScript" => "NodeJs",
+        "Assembly" => "NASM",
+        _ => "Desconhecido"
+    };
+    println!("O proposito de {} é {}.", linguagem, proposito);
 }
